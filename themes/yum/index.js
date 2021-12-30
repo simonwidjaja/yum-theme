@@ -23,6 +23,7 @@ import Video from './components/core/Video'
 import Placeholder from './components/core/Placeholder'
 import Spinner from './components/core/Spinner'
 // Content
+import CallToAction1 from './components/content/CallToAction1'
 import HeadlineAndText from './components/content/HeadlineAndText'
 import ColorfulHeadlineAndText from './components/content/ColorfulHeadlineAndText'
 import Claim from './components/content/Claim'
@@ -61,6 +62,7 @@ export {
   ImageAndText,
   TextVideo,
   PriceCard,
+  CallToAction1,
 
   WorkshopTeaser,
   

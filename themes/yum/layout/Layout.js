@@ -5,10 +5,7 @@ import { Normalize } from 'styled-normalize'
 import GlobalStyle from '../theme/GlobalStyle'
 import Navigation from './Navigation'
 
-// THIS WAS NEEDED IN LAST VERSION
-// THIS WAS NEEDED IN LAST VERSION
-// THIS WAS NEEDED IN LAST VERSION
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import 'primereact/resources/themes/saga-blue/theme.css';
 // import 'primereact/resources/primereact.min.css';

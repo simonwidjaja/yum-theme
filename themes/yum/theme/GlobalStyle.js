@@ -4,6 +4,17 @@ import { DefaultTheme } from './DefaultTheme'
 export default createGlobalStyle`
 
   //---
+  // Disable bootstraps XXL
+  //---
+  @media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      // Remove Original  
+      //max-width: 1320px; 
+      max-width: 1140px !important;
+    }  
+  }
+
+  //---
   // Global variables
   //---
   :root {
@@ -19,6 +30,12 @@ export default createGlobalStyle`
     --xs: 12px;
     --xxs: 6px;
     --none: 0px;
+
+    //---
+    // Border radius
+    //---
+    --border-radius: 8px;
+    --border-radius-xl: 32px;
 
     //---
     // Colors
@@ -155,4 +172,12 @@ export default createGlobalStyle`
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+
+  //---
+  // Inverted
+  //---
+  .inverted {
+    color: var(--white);
+  }
+
 `;

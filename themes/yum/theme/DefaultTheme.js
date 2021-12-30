@@ -11,7 +11,6 @@ export var mq = {
   min: (size) => `@media (min-width: ${breakpoints[size]})`,
   max: (size) => `@media (max-width: ${breakpoints[size]})`,
   minMax: (minSize, maxSize) => `@media (min-width: ${breakpoints[minSize]}) and (max-width: ${breakpoints[maxSize]})`,
-
 };
 
 export var fonts = {
@@ -27,8 +26,17 @@ export var fonts = {
 
 export var DefaultTheme = {
   colors: {
-    'black': '#282C31',
+    'coal': '#1A2327',
     'white': '#FFFFFF',
+    'purple': '#7955DC',
+    'purple-lightest': '#EBE5FA',
+    'purple-lighter': '#BBA9ED',
+    'purple-light': '#9A7FE5',
+    'purple-dark': '#6847CC',
+    'purple-darker': '#5A3ABC',
+    'purple-darkest': '#2D1B64',
+
+
     'light': '#F0F2F5',
     'lighter': '#F7F8FA',
     'gray-darkest': '#9BA4AF',
@@ -84,27 +92,27 @@ export var DefaultTheme = {
         `
         case 'h1': return `
           font-family: ${fonts[type]?.family};
-          font-weight: 800;
+          font-weight: 600;
           font-size: 24px;
           line-height: 28px;
           ${mq.min('lg')} {
-            font-size: 46px;
-            line-height: 52px;
+            font-size: 50px;
+            line-height: 58px;
           }
         `
         case 'h2': return `
           font-family: ${fonts[type]?.family};
-          font-weight: 800;
+          font-weight: 600;
           font-size: 22px;
           line-height: 26px;
           ${mq.min('lg')} {
-            font-size: 38px;
-            line-height: 44px;
+            font-size: 30px;
+            line-height: 36px;
           }
         `
         case 'h3': return `
           font-family: ${fonts[type]?.family};
-          font-weight: 800;
+          font-weight: 600;
           font-size: 20px;
           line-height: 24px;
           ${mq.min('lg')} {
@@ -114,7 +122,7 @@ export var DefaultTheme = {
         `
         case 'h4': return `
           font-family: ${fonts[type]?.family};
-          font-weight: 800;
+          font-weight: 600;
           font-size: 18px;
           line-height: 20px;
           ${mq.min('lg')} {

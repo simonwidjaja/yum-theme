@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
-export default function NAME(props) {
+export default function Separator(props) {
   let className = props.className ? props.className : '';
   let style = props.style ? props.style : {};
+  let color = props.color || 'var(--purple)';
   return (
-    <Component className={"NAME "+className} style={style} size="1" props={props}></Component>
+    <Component className={"Separator "+className} style={style} size="1" props={props}></Component>
   )
 }
 
@@ -15,10 +16,10 @@ export default function NAME(props) {
 
 const Component = styled.hr`
   display: inline-block;
-  width: ${attr => attr.props.width || 'var(--xl)'};
-  height: ${attr => attr.props.height || 'var(--xxs)'};
-  margin: 30px inherit;
+  width: ${attr => attr.props.width || 'var(--lg)'};
+  height: ${attr => attr.props.height || 'var(--xs)'};
+  margin: 10px 0 !important;
   border: none;
   opacity: 1;
-  background-color: ${attr => attr.props.color || 'var(--accent1)'};
+  background-color: ${attr => attr.props.color || 'var(--purple)'};
 `
