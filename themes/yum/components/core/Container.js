@@ -4,7 +4,7 @@ export default function Container(props) {
   const className = props.className ? props.className : '';
   const style = props.style ? props.style : {};  
   return (
-    <BsContainer className={"container Container "+className} style={style}>
+    <BsContainer className={"Container "+className} style={style} fluid={props.fluid}>
       {props.children}
     </BsContainer>
   )

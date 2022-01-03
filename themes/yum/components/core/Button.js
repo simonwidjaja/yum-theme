@@ -59,9 +59,6 @@ const Component = styled.div`
     background-color: ${props => props.backgroundColor || props.inverted ? 'var(--white)' : 'var(--purple)'};
     color: ${props => props.color || props.inverted ? 'var(--coal)' : 'var(--white)'};
     cursor: pointer;
-    
-
-    ${ (props) => { console.log(props.inverted) }  }
 
     .label {
       flex: 1 1 100px;

@@ -87,7 +87,7 @@ export default createGlobalStyle`
   //---
   // Misc
   //---
-  .textcenter, .textCenter, .text-center {
+  .center, .textcenter, .textCenter, .text-center {
     text-align: center;
   }
 

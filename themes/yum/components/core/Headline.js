@@ -7,7 +7,7 @@ export default function Headline(props) {
   const font = props.font || 'font-h1';
 
   return (
-    <Component className={"Headline "+className} style={style}>
+    <Component className={"Headline "+className} style={style} inverted={props.inverted}>
       {props.meta && <div className="meta font2-h4">{props.meta}</div> }
       <h1 className={`${font} margin-top-none margin-bottom-none`}>{props.title || props.children}</h1>
       {props.sub && <div className="sub font2-p">{props.sub}</div> }
@@ -21,5 +21,8 @@ export default function Headline(props) {
 ////////////////////////////////////////////////////
 
 const Component = styled.div`
-  margin-bottom: var(--xs);  
+  margin-bottom: var(--xs);
+  h1 {
+    color: ${props => props.color || props.inverted ? 'var(--white)' : 'var(--coal)'};
+  }
 `

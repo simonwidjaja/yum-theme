@@ -20,17 +20,33 @@ export default function index(props) {
               <Headline>I am the headline</Headline>
               <Text>This is a random teaser text that does not have any meaning. This is a random teaser text that does not have any meaning. This is a random teaser text that does not have any meaning. </Text>
               <Button>Download</Button>
-              <Button inverted="true">Download</Button>
+              <Button inverted>Download</Button>
             </Col>
           </Row>
         </Container>
         
-        <Container>
-          <CallToAction1></CallToAction1>
-        </Container>
+        <section className="margin-bottom-xl" style={{backgroundColor: 'var(--coal)'}}>
+          <Container className="center">
+            <Row>
+              <Col>
+                <Separator />
+                <Headline inverted>I am the headline</Headline>
+              </Col>
+            </Row>
+          </Container>
+        </section>
         
         <Container>
-          <CallToAction1></CallToAction1>
+          <CallToAction1 title="Ready for the next level?">
+            This is a random teaser text that does not have any meaning. This is a random teaser text that does not have any meaning. 
+            <Spacer height="40" />
+            <Button inverted>Start now</Button>
+          </CallToAction1>
+          <CallToAction1 title="Ready for the next level?">
+            This is a random teaser text that does not have any meaning. This is a random teaser text that does not have any meaning. 
+            <Spacer height="40" />
+            <Button inverted>Start now</Button>
+          </CallToAction1>
         </Container>
 
       </Component>

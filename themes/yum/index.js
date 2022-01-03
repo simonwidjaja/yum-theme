@@ -6,6 +6,8 @@
 //----------
 
 // Layout
+import DefaultTheme from './theme/DefaultTheme';
+// Layout
 import Layout from './layout/Layout';
 // Core
 import Headline from './components/core/Headline'
@@ -40,6 +42,7 @@ import FormSelect from './components/forms/FormSelect'
 import WorkshopTeaser from './components/special/WorkshopTeaser'
 
 export {
+  DefaultTheme,
   Layout,
   Section,
   Container,

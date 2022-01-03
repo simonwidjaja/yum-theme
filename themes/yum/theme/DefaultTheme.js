@@ -16,7 +16,7 @@ export var mq = {
 export var fonts = {
   primary: {
     family: 'Barlow, Arial, sans-serif',
-    import: "@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;700;900&family=Bitter:ital,wght@0,400;0,700;1,400&family=Gamja+Flower&display=swap');"
+    import: "@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;700;900&display=swap');"
   },
   secondary: {
     family: 'Bitter, serif',
@@ -130,11 +130,12 @@ export var DefaultTheme = {
             line-height: 24px;
           }
         `
+        case 'text':
         case 'p': return `
           font-family: ${fonts[type]?.family};
           font-weight: 400;
-          font-size: 18px;
-          line-height: 26px;
+          font-size: 16px;
+          line-height: 20px;
           ${mq.min('lg')} {
             font-size: 18px;
             line-height: 26px;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Section, Container, Row, Col, Spacer, Headline, Button, Pill, HeadlineAndText, Separator, ImageAndText, Claim, Text, WorkshopTeaser} from '@@yum'
+import {DefaultTheme, Section, Container, Row, Col, Spacer, Headline, Button, Pill, HeadlineAndText, Separator, ImageAndText, Claim, Text, WorkshopTeaser} from '@@yum'
 
 export default function CallToAction1(props) {
   let className = props.className ? props.className : '';
@@ -9,10 +9,8 @@ export default function CallToAction1(props) {
       <Row className="base">
         <Col xs={{offset: 1, span: 11}} lg={{offset: 1, span: 6}}>
           <Separator color="var(--white)" />
-          <Headline type="h1">Worauf wartest Du?</Headline>
-          <Text>Bringen wir gemeinsam Leben in Bude und erklären deine Dienstleistungen und emotionalisieren deine Produkte.</Text>
-          <Text>Bringen wir gemeinsam Leben in Bude und erklären deine Dienstleistungen und emotionalisieren deine Produkte.</Text>
-          <Button inverted>Kontaktiere uns</Button>
+          <Headline type="h1" inverted>{props.title}</Headline>
+          <Text>{props.body || props.children}</Text>
         </Col>
         <Col className="d-none d-lg-block">
           <div className="img-wrapper">
@@ -33,8 +31,13 @@ const Component = styled.div`
   .base {
     background-color: var(--purple);
     border-radius: var(--border-radius-xl);
-    padding: 77px 0;
-    margin-bottom: 140px;
+    padding: 40px 0;
+    margin-bottom: 40px;
+
+    ${DefaultTheme.mq.min('lg')} {
+      padding: 77px 0;
+      margin-bottom: 140px;
+    }   
 
     .img-wrapper {
       position: relative;
