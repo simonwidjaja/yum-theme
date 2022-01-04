@@ -4,6 +4,7 @@ import CookieConsent from "react-cookie-consent";
 import { Normalize } from 'styled-normalize'
 import GlobalStyle from '../theme/GlobalStyle'
 import Navigation from './Navigation'
+import {useEffect} from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,6 +17,21 @@ import Head from 'next/head'
 export default function Layout(props) {
   const style = props.style ? props.style : {};  
   const title = (props.page?.title ? props.page.title+' – ' : '') + props.config.site.title;
+
+
+  useEffect(() => {
+    // Add hubspot integration/tracking to the end of body
+    if (!window.___hubspot_integration_loaded) {
+      const script = document.createElement('script');
+      script.setAttribute('async', '');
+      script.setAttribute('defer', '');
+      script.setAttribute('id', 'hs-script-loader');
+      script.src = props.config.hubspotTrackingURL;
+      document.querySelector("body").appendChild(script);
+      console.log('hubspot integration loaded...');
+      window.___hubspot_integration_loaded = true;
+    }
+  }, [])
 
   return (
     <Component className={['Layout', 'section', props.className].join(' ')} style={style}>
@@ -61,7 +77,7 @@ export default function Layout(props) {
       </footer>
 
       {/* Non blocking scripts */}
-      <script type="text/javascript" id="hs-script-loader" async defer src={props.config.hubspotTrackingURL}></script>
+      {/* <script type="text/javascript" id="hs-script-loader" async defer src={props.config.hubspotTrackingURL}></script> */}
 
     </Component>
   )
