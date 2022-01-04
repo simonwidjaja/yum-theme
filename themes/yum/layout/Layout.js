@@ -8,10 +8,6 @@ import {useEffect} from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// import 'primereact/resources/themes/saga-blue/theme.css';
-// import 'primereact/resources/primereact.min.css';
-// import 'primeicons/primeicons.css';
-
 import Head from 'next/head'
 
 export default function Layout(props) {
@@ -28,7 +24,6 @@ export default function Layout(props) {
       script.setAttribute('id', 'hs-script-loader');
       script.src = props.config.hubspotTrackingURL;
       document.querySelector("body").appendChild(script);
-      console.log('hubspot integration loaded...');
       window.___hubspot_integration_loaded = true;
     }
   }, [])
@@ -75,9 +70,6 @@ export default function Layout(props) {
       <footer>
         {props.footer}
       </footer>
-
-      {/* Non blocking scripts */}
-      {/* <script type="text/javascript" id="hs-script-loader" async defer src={props.config.hubspotTrackingURL}></script> */}
 
     </Component>
   )
