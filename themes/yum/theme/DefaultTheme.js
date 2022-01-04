@@ -28,6 +28,15 @@ export var DefaultTheme = {
   colors: {
     'coal': '#1A2327',
     'white': '#FFFFFF',
+
+    'coal': '#00FF00',
+    'coal-lightest': '#F0F1F1',
+    'coal-lighter': '#868B8C',
+    'coal-light': '#31393D',
+    'coal-dark': '#151D21',
+    'coal-darker': '#0D1519',
+    'coal-darkest': '#000',    
+
     'purple': '#7955DC',
     'purple-lightest': '#EBE5FA',
     'purple-lighter': '#BBA9ED',
@@ -36,7 +45,18 @@ export var DefaultTheme = {
     'purple-darker': '#5A3ABC',
     'purple-darkest': '#2D1B64',
 
+    'french-rose': '#F03F65',
+    'french-rose-lightest': '#FFE2E8',
+    'french-rose-lighter': '#FC84A0',
+    'french-rose-light': '#FC6083',
+    'french-rose-dark': '#E23157',
+    'french-rose-darker': '#D3264E',
+    'french-rose-darkest': '#920B41',
 
+
+
+
+    // DEPRECATED
     'light': '#F0F2F5',
     'lighter': '#F7F8FA',
     'gray-darkest': '#9BA4AF',
@@ -52,7 +72,6 @@ export var DefaultTheme = {
     'accent1': '#81009e',
     'accent2': '#00E2B6',
     'accent2-dark': '#00bf9a',
-
     'navigation_background': '#FFF',
     'navigation_color': '#282C31',
   },

@@ -46,7 +46,7 @@ export default function Layout(props) {
           @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;700;900&family=Bitter:ital,wght@0,400;0,700;1,400&family=Gamja+Flower&display=swap');
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
       </Head>
 
       
@@ -59,6 +59,10 @@ export default function Layout(props) {
       <footer>
         {props.footer}
       </footer>
+
+      {/* Non blocking scripts */}
+      <script type="text/javascript" id="hs-script-loader" async defer src={props.config.hubspotTrackingURL}></script>
+
     </Component>
   )
 };

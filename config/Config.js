@@ -16,6 +16,7 @@ export default {
       </>
   },
   formSubmissionURL: 'https://hq.xdhero.com/xdhero/inquiry',
+  hubspotTrackingURL: '//js-eu1.hs-scripts.com/25408596.js',
   // preNavigationRibbon: <PreNavigationRibbon />,
   preNavigationRibbon: <></>,
   primaryNavigation: [

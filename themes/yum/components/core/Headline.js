@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {MetaLabel} from '@@yum'
 
 export default function Headline(props) {
   let className = props.className ? props.className : '';
@@ -8,7 +9,8 @@ export default function Headline(props) {
 
   return (
     <Component className={"Headline "+className} style={style} inverted={props.inverted}>
-      {props.meta && <div className="meta font2-h4">{props.meta}</div> }
+      {/* {props.meta && <div className="meta">{props.meta}</div> } */}
+      {props.meta && <MetaLabel>{props.meta}</MetaLabel> }
       <h1 className={`${font} margin-top-none margin-bottom-none`}>{props.title || props.children}</h1>
       {props.sub && <div className="sub font2-p">{props.sub}</div> }
     </Component>

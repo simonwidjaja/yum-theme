@@ -7,7 +7,7 @@ export default function CallToAction1(props) {
   return (
     <Component className={"CallToAction1 inverted "+className} style={style}>
       <Row className="base">
-        <Col xs={{offset: 1, span: 11}} lg={{offset: 1, span: 6}}>
+        <Col xs={{offset: 1, span: 10}} lg={{offset: 1, span: 6}}>
           <Separator color="var(--white)" />
           <Headline type="h1" inverted>{props.title}</Headline>
           <Text>{props.body || props.children}</Text>
