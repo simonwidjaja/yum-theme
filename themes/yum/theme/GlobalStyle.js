@@ -22,6 +22,7 @@ export default createGlobalStyle`
     //---
     // Lengths
     //---
+    --xxxl: 260px;
     --xxl: 160px;
     --xl: 90px;
     --lg: 60px;
@@ -47,6 +48,7 @@ export default createGlobalStyle`
   //---
   // Padddings and Margins
   //---
+  .padding-top-xxxl { padding-top: var(--xxxl) !important; }
   .padding-top-xxl { padding-top: var(--xxl) !important; }
   .padding-top-xl  { padding-top: var(--xl)  !important; }
   .padding-top-lg   { padding-top: var(--lg)  !important; }
@@ -56,6 +58,7 @@ export default createGlobalStyle`
   .padding-top-xxs { padding-top: var(--xxs)  !important; }
   .padding-top-none { padding-top: var(--none)  !important; }
 
+  .padding-bottom-xxxl { padding-bottom: var(--xxxl) !important; }
   .padding-bottom-xxl { padding-bottom: var(--xxl) !important; }
   .padding-bottom-xl  { padding-bottom: var(--xl)  !important; }
   .padding-bottom-lg   { padding-bottom: var(--lg)  !important; }
@@ -65,6 +68,7 @@ export default createGlobalStyle`
   .padding-bottom-xxs { padding-bottom: var(--xxs)  !important; }
   .padding-bottom-none { padding-bottom: var(--none)  !important; }
 
+  .margin-top-xxxl { margin-top: var(--xxxl)  !important; }
   .margin-top-xxl { margin-top: var(--xxl)  !important; }
   .margin-top-xl  { margin-top: var(--xl)  !important; }
   .margin-top-lg   { margin-top: var(--lg)  !important; }
@@ -74,6 +78,7 @@ export default createGlobalStyle`
   .margin-top-xxs { margin-top: var(--xxs)  !important; }
   .margin-top-none { margin-top: var(--none)  !important; }
 
+  .margin-bottom-xxxl { margin-bottom: var(--xxxl)  !important; }
   .margin-bottom-xxl { margin-bottom: var(--xxl)  !important; }
   .margin-bottom-xl  { margin-bottom: var(--xl)  !important; }
   .margin-bottom-lg   { margin-bottom: var(--lg)  !important; }

@@ -1,6 +1,7 @@
 import Layout from '@@components/Layout'
 import styled from 'styled-components'
-import {HubspotForm, MetaLabel, XrayLabel, CallToAction1, Section, Container, Row, Col, Spacer, Headline, Button, Pill, HeadlineAndText, Separator, Text, ImageAndText, Claim, WorkshopTeaser} from '@@yum'
+import {CardSet, HubspotForm, List, MetaLabel, XrayLabel, CallToAction1, Section, Container, Row, Col, Spacer, Headline, Button, Pill, HeadlineAndText, Separator, Text, ImageAndText, Claim, WorkshopTeaser} from '@@yum'
+import * as yum from '@@yum'
 import Link from 'next/link'
 import XrayNav from '../../themes/yum/components/internal/XrayNav'
 
@@ -26,9 +27,6 @@ export default function index(props) {
         <Container>
           <Row>
             <Col>
-              <XrayLabel>Pill (WIP)</XrayLabel>
-              <Pill>Pill</Pill>
-
               <XrayLabel>MetaLabel</XrayLabel>
               <MetaLabel>META LABEL</MetaLabel>
 
@@ -83,8 +81,79 @@ export default function index(props) {
         
         <XrayLabel>HubspotForm</XrayLabel>
         <Container>
-          <HubspotForm region="eu1" portalId="25408596" formId="c72ae9a0-25c5-4f62-be94-d62633802d3e" />
+          <HubspotForm 
+            title="Exklusive Inhalte, Tricks und kostenlose Goodies" 
+            sub="Melde Dich zu unserem Newsletter an" 
+            consent="en" 
+            region="eu1" portalId="25446583" formId="cb92614e-b5e4-4690-9871-b80ab7b498f3" />
         </Container>
+        
+        <XrayLabel>List</XrayLabel>
+        <Container>
+          <Headline className="margin-bottom-md">A default list</Headline>
+          <List items={[
+            "Custom Characters",
+            "Custom Characters",
+            "Custom Characters and Explanatory VideosCustom Characters and Explanatory Videos Custom Characters and Explanatory VideosCustom Characters and Explanatory Videos",
+            "Custom Characters",
+          ]} />
+
+          <Headline className="margin-bottom-md">A default list</Headline>
+          <List items={[
+            "Custom Characters",
+            "Custom Characters",
+            "Custom Characters and Explanatory VideosCustom Characters and Explanatory Videos Custom Characters and Explanatory VideosCustom Characters and Explanatory Videos",
+            "Custom Characters",
+          ]} iconBaseColor="var(--purple)" iconColor="var(--coal)" />
+        </Container>
+
+        <XrayLabel>CardSet</XrayLabel>
+        <Container>
+          <CardSet cards={[
+            {
+              // icon: "/themes/yum/wip/message.svg",
+              title: "Erstgespräch",
+              text: "Gemeinsam analysieren wir den Bedarf und lokalisieren Potentiale. Wir schauen uns inspirierende Beispiele an und entwickeln im Sparring den Schlachtplan.",
+              bgColor: "var(--purple)",
+            },
+            {
+              // icon: "/themes/yum/wip/lamp.svg",
+              title: "Konzept und Storyboard",
+              text: "Wir erarbeiten in enger Abstimmung das Feinkonzept sowie Storyboard und definieren Tasks und Meilensteine.",
+            },
+            {
+              // icon: "/themes/yum/wip/lamp.svg",
+              title: "Added",
+              text: "Wir erarbeiten in enger Abstimmung das Feinkonzept sowie Storyboard und definieren Tasks und Meilensteine.",
+              bgColor: "var(--purple)",
+            },
+          ]}/>
+        </Container>
+
+        <XrayLabel>Testimonial</XrayLabel>
+        <Container>
+          <yum.Testimonial image="/images/testimonial_sandro_jenny.png" name="Sandro Jenny, Projektleiter, w-vision AG">
+            Ein sehr spannender und praxisnaher Workshop zum Thema Webanimationen mit Adobe XD und Hero Plugin. Wir lernten in Kürze die einfachsten Wege kennen, um ohne grosse Programmier-Kenntnisse interaktive Webanimationen erstellen zu können. So macht Lernen Spass.
+          </yum.Testimonial>
+        </Container>        
+
+        <XrayLabel>CallToActionDuo</XrayLabel>
+        <yum.CallToActionDuo items={[
+          {
+            title: "Lorem ipsum dolor sit amet consectetur",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur quia exercitationem, assumenda possimus consequuntur blanditiis commodi totam sapiente pariatur tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur quia exercitationem, assumenda possimus consequuntur blanditiis commodi totam sapiente pariatur tempora.",
+            buttonLabel: "Anfragen",
+            baseColor: "var(--white)",
+            inverted: false,
+          },
+          {
+            title: "Lorem ipsum dolor sit amet consectetur",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore consectetur quia exercitationem, assumenda possimus consequuntur blanditiis commodi totam sapiente pariatur tempora.",
+            buttonLabel: "Anfragen",
+            baseColor: "var(--purple)",
+            inverted: true,
+          },
+        ]} />
 
       </Component>
     </Layout>

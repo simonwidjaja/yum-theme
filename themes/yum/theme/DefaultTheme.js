@@ -28,6 +28,7 @@ export var DefaultTheme = {
   colors: {
     'coal': '#1A2327',
     'white': '#FFFFFF',
+    'snow': '#EAEDF0',
 
     'coal': '#00FF00',
     'coal-lightest': '#F0F1F1',
