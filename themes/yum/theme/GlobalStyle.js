@@ -177,6 +177,11 @@ export default createGlobalStyle`
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+  * {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
 
   //---
   // Inverted

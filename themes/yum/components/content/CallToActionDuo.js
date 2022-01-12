@@ -17,10 +17,9 @@ export default function CallToActionDuo({ items }) {
             return <h1>TEST</h1>
           })} */}
           {items.map((item, index) => {
-            const { title, text, buttonLabel, baseColor, inverted } = item;
+            const { title, text, buttonLabel, href, baseColor, inverted } = item;
               return (
                 <Col
-                  className="custom-callToAction-col"
                   key={index}
                   md={{ offset: 0, span: 6 }}
                   style={{ display: "flex" }}
@@ -28,7 +27,7 @@ export default function CallToActionDuo({ items }) {
                   <div className={`item ${inverted ? 'inverted' : ''}` } style={{backgroundColor: baseColor, borderColor: !inverted ? "var(--coal)" : baseColor}}>
                     <h3>{title}</h3>
                     <p>{text}</p>
-                    <Button inverted={inverted}>{buttonLabel}</Button>
+                    <Button href={href} inverted={inverted}>{buttonLabel}</Button>
                   </div>
                 </Col>
               )
@@ -42,6 +41,7 @@ export default function CallToActionDuo({ items }) {
 
 const Component = styled.div`
   .item {
+    width: 100%;
     border: 2px solid;
     border-radius: 32px;
     padding: 59px 56px;
