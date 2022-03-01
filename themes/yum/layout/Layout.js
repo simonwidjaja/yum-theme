@@ -56,8 +56,11 @@ export default function Layout(props) {
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;700;900&family=Bitter:ital,wght@0,400;0,700;1,400&family=Gamja+Flower&display=swap');
         </style>
+        {/* GSAP */}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+        {/* Feather Icons: https://github.com/AT-UI/feather-font */}
+        <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css" />
       </Head>
 
       
